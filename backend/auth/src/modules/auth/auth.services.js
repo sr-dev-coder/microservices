@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs"
 import ApiError from "../../common/utils/api-error.js"
 import User from "./auth.model.js"
 import { generateAccessToken, generateRefreshToken } from "../../common/utils/jwt.utils.js"
-
+ 
 const register = async ({ name, email, password }) =>{
     const existing = await User.findOne({ email })
 
