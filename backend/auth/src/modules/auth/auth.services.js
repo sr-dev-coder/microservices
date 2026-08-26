@@ -22,7 +22,7 @@ const register = async ({ name, email, password }) =>{
     delete userObj.password
 
     return userObj
-}
+} 
 
 const login = async ({ email, password }) =>{
     const user = await User.findOne({ email }).select("+password")
